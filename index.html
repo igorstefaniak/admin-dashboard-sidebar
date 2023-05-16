@@ -107,7 +107,21 @@
   <section class="data-section">
     <div class="title-section"><span id="hello-text"></span><span id="user-text"></span> </div>
     <section id="list">
-      <div id='div1' class='widget1x1 widget'>
+      <div id='div1' class='widget2x2 widget'>
+        <div class="title"><i class="bx bx-calendar"></i>
+          <div tabindex="0" id='data'>Liczba klientów</div>
+        </div>
+        <div class="chart"><canvas id="myChart"></canvas></div>
+      </div>
+      <div id='div2' class='widget1x1 widget'>
+        <div class="title"><i class="bx bx-cart"></i>
+          <div tabindex="0" id='data'>Liczba zamówień (dzisiaj)</div>
+        </div>
+        <div class="counter">
+          <div class="text">178<span class="small"> tys.</div>
+        </div>
+      </div>
+      <div id='div3' class='widget1x1 widget'>
         <div class="title"><i class="bx bx-hdd"></i>
           <div tabindex="0" id='data'>Dysk zewnętrzny</div>
         </div>
@@ -120,20 +134,6 @@
             <circle class="progress" cx="57" cy="57" r="52" style="--percent:50"></circle>
           </svg>
         </div>
-      </div>
-      <div id='div2' class='widget1x1 widget'>
-        <div class="title"><i class="bx bx-cart"></i>
-          <div tabindex="0" id='data'>Liczba zamówień (dzisiaj)</div>
-        </div>
-        <div class="counter">
-          <div class="text">178<span class="small"> tys.</div>
-        </div>
-      </div>
-      <div id='div3' class='widget2x2 widget'>
-        <div class="title"><i class="bx bx-calendar"></i>
-          <div tabindex="0" id='data'>Liczba klientów</div>
-        </div>
-        <div class="chart"><canvas id="myChart"></canvas></div>
       </div>
       </div>
     </section>

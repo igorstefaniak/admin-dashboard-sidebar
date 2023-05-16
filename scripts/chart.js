@@ -95,8 +95,8 @@ new Chart(ctx, {
       borderWidth: 1,
       borderColor: accentColor,
       backgroundColor: "#214c62",
-      borderWidth: 6,
-      borderRadius: 12
+      borderWidth: 5,
+      borderRadius: 10
     }]
   },
   options: {
