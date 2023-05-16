@@ -1,0 +1,68 @@
+@media (orientation: landscape) and (max-width:1249px) {
+  body {
+    .sidebar {
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+    .sidebar::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
+@media only screen and (max-width:359px) {
+
+  #list {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media only screen and (max-width:575px) and (min-width:360px) {
+  #list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width:899px) and (min-width:576px) {
+
+  #list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media only screen and (max-width:1249px) and (min-width:900px) {
+
+  #list {
+    grid-template-rows: repeat(5, 240px);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width:1649px) and (min-width:1250px) {
+
+  #list {
+    grid-template-rows: repeat(5, 240px);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
+@media only screen and (min-width:1650px) {}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 8px;
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sidebar-color);
+}

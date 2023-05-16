@@ -1,0 +1,149 @@
+<!-- Igor Stefaniak 2023 -->
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="Igor Stefaniak">
+  <meta name="copyright" content="Igor Stefaniak">
+  <meta name="theme-color" content="#18191a">
+  <link rel="icon" href="http://example.com/favicon.png">
+  <title>Kajet - Panel</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./styles/main-style.css">
+  <link rel="stylesheet" href="./styles/web-el-style.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+  <nav class="sidebar">
+    <div class="menu-header">
+      <i class='bx bx-book-bookmark icon'></i>
+      <div class="logo_name">Kajet</div>
+      <i class='bx bx-menu' id="btn"></i>
+    </div>
+    <ul class="menu-list">
+      <li id="btn-search">
+        <i class='bx bx-search'></i>
+        <input type="search" placeholder="Przeszukaj...">
+        <span class="tooltip">Szukaj</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="link-text">Panel</span>
+        </a>
+        <span class="tooltip">Panel</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span class="link-text">Użytkownik</span>
+        </a>
+        <span class="tooltip">Użytkownik</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-chat'></i>
+          <span class="link-text">Wiadomości</span>
+        </a>
+        <span class="tooltip">Wiadomości</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2'></i>
+          <span class="link-text">Analityka</span>
+        </a>
+        <span class="tooltip">Analityka</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-folder'></i>
+          <span class="link-text">Menadżer plików</span>
+        </a>
+        <span class="tooltip">Menadżer plików</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cart-alt'></i>
+          <span class="link-text">Zamówienia</span>
+        </a>
+        <span class="tooltip">Zamówienia</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-heart'></i>
+          <span class="link-text">Zapisane</span>
+        </a>
+        <span class="tooltip">Zapisane</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="link-text">Ustawienia</span>
+        </a>
+        <span class="tooltip">Ustawienia</span>
+      </li>
+      <li class="profile">
+        <div class="profile-details">
+          <img src="profile.jpg" alt="profileImg">
+          <div class="name_job">
+            <div class="name">&ltimię i nazwisko&gt</div>
+            <div class="job">&ltstanowisko&gt</div>
+          </div>
+        </div>
+        <a href="#">
+          <i class='bx bx-log-out' id="log_out"></i>
+        </a>
+        <span class="tooltip">Wyloguj się</span>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="data-section">
+    <div class="title-section"><span id="hello-text"></span><span id="user-text"></span> </div>
+    <section id="list">
+      <div id='div1' class='widget1x1 widget'>
+        <div class="title"><i class="bx bx-hdd"></i>
+          <div tabindex="0" id='data'>Dysk zewnętrzny</div>
+        </div>
+        <div class="circle-big">
+          <div class="text">
+            50/100<div class="small">GB</div>
+          </div>
+          <svg>
+            <circle class="bg" cx="57" cy="57" r="52"></circle>
+            <circle class="progress" cx="57" cy="57" r="52" style="--percent:50"></circle>
+          </svg>
+        </div>
+      </div>
+      <div id='div2' class='widget1x1 widget'>
+        <div class="title"><i class="bx bx-cart"></i>
+          <div tabindex="0" id='data'>Liczba zamówień (dzisiaj)</div>
+        </div>
+        <div class="counter">
+          <div class="text">178<span class="small"> tys.</div>
+        </div>
+      </div>
+      <div id='div3' class='widget2x2 widget'>
+        <div class="title"><i class="bx bx-calendar"></i>
+          <div tabindex="0" id='data'>Liczba klientów</div>
+        </div>
+        <div class="chart"><canvas id="myChart"></canvas></div>
+      </div>
+      </div>
+    </section>
+  </section>
+  <script src="./scripts/sidebar.js"></script>
+  <script src="./scripts/welcome-text.js"></script>
+  <script src="./scripts/widgets.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./scripts/chart.js"></script>
+  <script src="./scripts/icons.js"></script>
+
+</body>
+</html>
