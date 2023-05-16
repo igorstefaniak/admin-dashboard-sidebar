@@ -95,8 +95,8 @@ new Chart(ctx, {
       borderWidth: 1,
       borderColor: accentColor,
       backgroundColor: "#214c62",
-      borderWidth: 5,
-      borderRadius: 10
+      borderWidth: 4,
+      borderRadius: 8
     }]
   },
   options: {
@@ -123,7 +123,10 @@ new Chart(ctx, {
               },
               beginAtZero: true
             },
-            grid:{color:"#575757", lineWidth: 2},
+            grid:{color:"#575757", lineWidth: 3},
+            border: {
+              width: 0
+            }
           },
       x: {
         ticks: {
