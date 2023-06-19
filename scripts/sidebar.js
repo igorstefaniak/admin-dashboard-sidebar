@@ -41,3 +41,17 @@ sidebar.addEventListener('touchend', e => {
   touchendX = e.changedTouches[0].screenX
   checkDirection()
 })
+
+
+$( ".link-list" ).hover(
+  function() {
+    $( ".link-list" ).addClass("open")
+    $( ".link-list" ).removeClass("closed")
+    $( ".bxs-chevron-down" ).addClass("bx-rotate-180")
+},
+function() {
+  $( ".link-list" ).removeClass("open")
+  $( ".link-list" ).addClass("closed")
+  $( ".bxs-chevron-down" ).removeClass("bx-rotate-180")
+}
+  )

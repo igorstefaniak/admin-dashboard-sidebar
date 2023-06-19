@@ -206,7 +206,7 @@ body {
     position: absolute;
     display: block;
     width: 4px;
-    height: calc(100% - 30px);
+    height: 20px;
     left: 0;
     background-color: var(--accent-color);
     transform: scaleX(0);
@@ -225,6 +225,77 @@ body {
     transition: all 0.1s ease-out;
     position: relative;
     display: inline-block;
+}
+.sidebar.open .link-list  {
+    transition: all 0.2s ease-in-out 0.1s;
+}
+
+.link-list.open {
+    background: rgba(24, 25, 26, 0.757);
+    border-radius: 12px;
+}
+
+.sidebar .link-list .folder{
+    position: fixed;
+    opacity: 0;
+}
+
+.sidebar .link-list.closed .folder,
+.sidebar .link-list.closed .folder *{
+    width: 0!important;
+    min-width: 0!important;
+    font-size: 0!important;
+}
+
+.sidebar .link-list .folder *{
+    transition: none!important;
+}
+
+.sidebar .link-list.open .folder{
+    position: relative;
+    opacity: 1;
+}
+
+.sidebar.open .folder .item{
+    margin: 8px 10px 8px 10px;
+}
+
+.folder .item{
+    margin-left: 0px;
+}
+
+.folder li:last-child{
+    padding-bottom: 8px;
+}
+
+.sidebar .folder .item span{
+    display: none;
+}
+
+.sidebar.open .folder .item span{
+    display: flex;
+}
+
+.sidebar li a .badget,
+.sidebar li a .more{
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.1s ease-out;
+    position: relative;
+    display: inline-block;
+}
+
+.sidebar.open li a .badget,
+.sidebar.open li a .more  {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.3s ease-out;
+    transition-delay: 0.4s;
+}
+
+.sidebar.open li a .more {
+    transition-delay: 0.2s;
 }
 
 .sidebar.open li a .link-text {
@@ -294,7 +365,6 @@ body {
     flex-wrap: nowrap;
 
 }
-
 
 .sidebar li.profile .job {
     font-size: 11px;
@@ -616,3 +686,18 @@ canvas {
 .chart {
     height: calc(100% - 69px);
 }
+.badget{
+    font-weight: 700;
+    margin: 12px;
+    margin-left: auto;
+    background: var(--accent-color);
+    padding: 4px 8px;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+.more {
+    font-size: 12px;
+    margin-left: auto;
+}
+

@@ -12,7 +12,7 @@
   <meta name="copyright" content="Igor Stefaniak">
   <meta name="theme-color" content="#18191a">
   <link rel="icon" href="http://example.com/favicon.png">
-  <title>Kajet - Panel</title>
+  <title>Kajet - Panel Klienta</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./styles/main-style.css">
   <link rel="stylesheet" href="./styles/web-el-style.css">
@@ -57,6 +57,7 @@
         <a href="#">
           <i class='bx bx-pie-chart-alt-2'></i>
           <span class="link-text">Analityka</span>
+          <span class="badget">Nowe</span>
         </a>
         <span class="tooltip">Analityka</span>
       </li>
@@ -81,6 +82,28 @@
         </a>
         <span class="tooltip">Zapisane</span>
       </li>
+      <li class="link-list closed">
+        <a onclick="klik()">
+          <i class='bx bx-save'></i>
+          <span class="link-text">Multimedia</span>
+          <span class="more"><i class='bx bxs-chevron-down'></i></span>
+        </a>
+        <span class="tooltip">Multimedia</span>
+        <ul class="folder">
+          <li class="item">
+            <a href="#">
+              <i class='bx bx-photo-album'></i>
+              <span class="link-text">Zdjęcia</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <i class='bx bx-video'></i>
+              <span class="link-text">Wideo</span>
+            </a>
+          </li>
+        </ul>
+      </li>
       <li>
         <a href="#">
           <i class='bx bx-cog'></i>
@@ -88,7 +111,7 @@
         </a>
         <span class="tooltip">Ustawienia</span>
       </li>
-      <li class="profile">
+      <!--       <li>
         <div class="profile-details">
           <img src="profile.jpg" alt="profileImg">
           <div class="name_job">
@@ -98,21 +121,22 @@
         </div>
         <a href="#">
           <i class='bx bx-log-out' id="log_out"></i>
+          <span class="link-text">Ustawienia</span>
         </a>
         <span class="tooltip">Wyloguj się</span>
-      </li>
+      </li> -->
     </ul>
   </nav>
 
   <section class="data-section">
     <div class="title-section"><span id="hello-text"></span><span id="user-text"></span> </div>
     <section id="list">
-      <div id='div1' class='widget2x2 widget'>
+<!--       <div id='div1' class='widget2x2 widget'>
         <div class="title"><i class="bx bx-calendar"></i>
           <div tabindex="0" id='data'>Liczba klientów</div>
         </div>
         <div class="chart"><canvas id="myChart"></canvas></div>
-      </div>
+      </div> -->
       <div id='div2' class='widget1x1 widget'>
         <div class="title"><i class="bx bx-cart"></i>
           <div tabindex="0" id='data'>Liczba zamówień (dzisiaj)</div>
