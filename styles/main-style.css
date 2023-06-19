@@ -226,13 +226,13 @@ body {
     position: relative;
     display: inline-block;
 }
-.sidebar.open .link-list  {
+.sidebar .link-list  {
     transition: all 0.2s ease-in-out 0.1s;
+    border-radius: 12px;
 }
 
 .link-list.open {
     background: rgba(24, 25, 26, 0.757);
-    border-radius: 12px;
 }
 
 .sidebar .link-list .folder{

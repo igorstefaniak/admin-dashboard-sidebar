@@ -24,8 +24,8 @@ let touchstartX = 0
 let touchendX = 0
     
 function checkDirection() {
-  console.log(touchstartX - touchendX < -500)
-  if (touchendX < touchstartX) {
+  console.log(touchstartX - touchendX < -100)
+  if (touchendX - touchstartX < -100) {
     sidebar.classList.remove("open");
   }
   if (touchendX > touchstartX && touchstartX - touchendX < -100) { //todo ZMIENIC WARTOSCI
