@@ -15,6 +15,7 @@
   <title>Kajet - Panel Klienta</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./styles/main-style.css">
+  <link rel="stylesheet" href="./styles/widget.css">
   <link rel="stylesheet" href="./styles/web-el-style.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
@@ -72,6 +73,7 @@
         <a href="#">
           <i class='bx bx-cart-alt'></i>
           <span class="link-text">Zamówienia</span>
+          <span class="badget">12</span>
         </a>
         <span class="tooltip">Zamówienia</span>
       </li>
@@ -83,7 +85,7 @@
         <span class="tooltip">Zapisane</span>
       </li>
       <li class="link-list closed">
-        <a onclick="klik()">
+        <a>
           <i class='bx bx-save'></i>
           <span class="link-text">Multimedia</span>
           <span class="more"><i class='bx bxs-chevron-down'></i></span>
@@ -129,25 +131,24 @@
   </nav>
 
   <section class="data-section">
-    <div class="title-section"><span id="hello-text"></span><span id="user-text"></span> </div>
     <section id="list">
-<!--       <div id='div1' class='widget2x2 widget'>
-        <div class="title"><i class="bx bx-calendar"></i>
-          <div tabindex="0" id='data'>Liczba klientów</div>
-        </div>
-        <div class="chart"><canvas id="myChart"></canvas></div>
-      </div> -->
-      <div id='div2' class='widget1x1 widget'>
+            <div id='div1' class='widget2x2 widget'>
+              <div class="title"><i class="bx bx-calendar"></i>
+                <div tabindex="0" id='data'>Liczba klientów</div>
+              </div>
+              <div class="chart"><canvas id="myChart"></canvas></div>
+            </div>
+             <div id="div2" class="widget1x1 widget" draggable="true">
         <div class="title"><i class="bx bx-cart"></i>
-          <div tabindex="0" id='data'>Liczba zamówień (dzisiaj)</div>
+          <div tabindex="0" id="data">Liczba zamówień (dzisiaj)</div>
         </div>
         <div class="counter">
-          <div class="text">178<span class="small"> tys.</div>
+          <div class="text" >223<span class="small"> tys.</span></div>
         </div>
       </div>
-      <div id='div3' class='widget1x1 widget'>
+      <div id="div3" class="widget1x1 widget" draggable="true">
         <div class="title"><i class="bx bx-hdd"></i>
-          <div tabindex="0" id='data'>Dysk zewnętrzny</div>
+          <div tabindex="0" id="data">Dysk zewnętrzny</div>
         </div>
         <div class="circle-big">
           <div class="text">
@@ -159,9 +160,45 @@
           </svg>
         </div>
       </div>
+
+      <div id="div4" class="widget1x2 widget" draggable="true">
+        <div class="title"><i class="bx bx-comment-detail"></i>
+          <div tabindex="0">Social Media</div>
+        </div>
+        <div class="content">
+          <div class="actions-list">
+            <div class="action" sm="facebook">
+              <div class="button">
+                <i class="bx bxl-facebook-circle"></i>
+              </div>
+              <div class="tooltip">Facebook</div>
+            </div>
+            <div class="action" sm="instagram">
+              <div class="button">
+                <i class="bx bxl-instagram"></i>
+              </div>
+              <div class="tooltip">Instagram</div>
+            </div>
+            <div class="action" sm="twitter">
+              <div class="button">
+                <i class="bx bxl-twitter"></i>
+              </div>
+              <div class="tooltip">Twitter</div>
+            </div>
+            <div class="action" sm="tiktok">
+              <div class="button">
+                <i class="bx bxl-tiktok"></i>
+              </div>
+              <div class="tooltip">Tiktok</div>
+            </div>
+
+          </div>
+        </div>
       </div>
+
     </section>
   </section>
+
   <script src="./scripts/sidebar.js"></script>
   <script src="./scripts/welcome-text.js"></script>
   <script src="./scripts/widgets.js"></script>
@@ -169,4 +206,5 @@
   <script src="./scripts/chart.js"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,54 @@
+<!-- Igor Stefaniak 2023 -->
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Igor Stefaniak">
+    <meta name="copyright" content="Igor Stefaniak">
+    <meta name="theme-color" content="#18191a">
+    <link rel="icon" href="http://example.com/favicon.png">
+    <title>Kajet - Panel Klienta</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles/main-style.css">
+    <link rel="stylesheet" href="./styles/web-el-style.css">
+    <link rel="stylesheet" href="./styles/login-style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <!-- Header Start -->
+
+    <!-- <?php include_once './components/header.php';?> -->
+
+    <div id="container">
+        <div class="login-card">
+            <form class="form" action="./index.html" method="get" target="_blank">
+                <h1>Zaloguj się <i class="bx bx-edit-alt"></i></h1>
+                <div class="heading">Dane dostępowe</div>
+                <div class="description">Adres email i hasło, którymi zalogujesz się do Panelu klienta.</div>
+                <div class="input-container">
+                    <div class="collapse">
+                        <i class="icon bx bx-envelope"></i>
+                    </div>
+                    <input type="email" name="email" placeholder="nazwauzytkownika@domena.pl" class="input-field"
+                        id="email-input" required="">
+                    <label for="email-input">Adres e-mail</label>
+                </div>
+                <div class="input-container">
+                    <div class="collapse">
+                        <i class="icon bx bx-lock-alt"></i>
+                    </div>
+                    <input type="password" name="password" placeholder="••••••••" class="input-field"
+                        id="password-input" minlength="8" required="">
+                    <label for="password-input">Hasło</label>
+                </div>
+                <button type="submit" class="submit">Zaloguj się</button>
+            </form>
+        </div>
+    </div>
+</body>

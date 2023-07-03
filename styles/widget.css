@@ -1,0 +1,324 @@
+#list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-rows: repeat(5, 240px);
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: row dense;
+    min-height: 100vh;
+    transition: all 0.5s ease;
+    margin: 15px;
+}
+
+#list .title {
+    margin: 20px;
+    font-size: 20px; 
+    font-weight: 800;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+#list .title div {
+    font-family: 'Chillax-Regular', sans-serif;
+}
+
+#list .title i {
+    margin-right: 6px;
+}
+
+.widget {
+    cursor: grab;
+    font-size: 20px;
+    background: var(--sidebar-color);
+    border-radius: 20px;
+
+}
+
+.widget1x1 {
+    grid-area: span 1/span 1;
+}
+
+.widget1x2 {
+    grid-area: span 1/span 2;
+}
+
+.widget2x1 {
+    grid-area: span 2/span 1;
+}
+
+.widget2x2 {
+    grid-area: span 2/span 2;
+}
+
+
+.circle-big {
+    position: relative;
+    width: 114px;
+    height: 114px;
+    margin: 30px auto 25px auto;
+}
+
+.circle-big svg {
+    width: 114px;
+    height: 114px;
+}
+
+.circle-big .bg {
+    fill: none;
+    stroke-width: 10px;
+    stroke: rgba(var(--accent-color));
+    filter: opacity(0.3);
+}
+
+.circle-big .progress {
+    fill: none;
+    stroke-width: 10px;
+    stroke: rgba(var(--accent-color));
+    stroke-linecap: round;
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+    animation: big 1.5s ease-in-out;
+}
+
+.circle-big .text {
+    position: absolute;
+    width: 100%;
+    top: 37px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.widget .circle-big {
+    position: relative;
+    margin: 30px auto 25px auto;
+    width: 114px;
+    height: 114px;
+}
+
+.widget svg {
+    position: relative;
+    width: 114px;
+    height: 114px;
+    transform: rotate(-90deg);
+}
+
+.widget svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: rgba(var(--accent-color));
+    filter: opacity(0.3);
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.widget svg circle:last-of-type {
+    stroke-dasharray: 327px;
+    stroke-dashoffset: calc(327px - (327px * var(--percent)) / 100);
+    animation: big 1.5s ease-in-out;
+    stroke: rgba(var(--accent-color));
+    filter: opacity(1);
+}
+
+
+
+.circle-big .text .small {
+    font-size: 12px;
+    color: #fff;
+}
+
+@keyframes big {
+    from {
+        stroke-dashoffset: calc(327px - (327px * 0) / 100);
+    }
+
+    to {
+        stroke-dashoffset: calc(327px - (327px * var(--percent)) / 100);
+        filter: opacity(1);
+    }
+}
+
+.ghost {
+    box-sizing: border-box;
+    outline: 4px dashed var(--highlight-color);
+    background-color: transparent;
+}
+
+.hidden-grab-ghost {
+    opacity: 0;
+}
+
+.transition {
+    transition: all 2s ease-out .5s;
+    top: 0;
+}
+
+.counter {
+    position: relative;
+    width: 150px;
+    height: 114px;
+    margin: 30px auto 25px auto;
+    z-index: 10;
+}
+
+.counter::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 26px;
+    height: 0;
+    border: 4px solid rgba(var(--accent-color));
+    border-radius: 10px;
+}
+
+.counter .text {
+    position: absolute;
+    width: 100%;
+    top: 37px;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.counter .text .small {
+    font-size: 28px;
+    color: #fff;
+}
+
+.chart {
+    height: calc(100% - 69px);
+}
+
+
+.actions-list {
+    display: flex;
+    grid-gap: 15px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+
+.actions-list .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 100%;
+    border: none;
+    background-color: rgba(var(--accent-color), 0.1);
+    margin: 6px;
+    transition: all 0.5s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.actions-list .button i {
+    font-size: 1.7rem;
+    color: rgba(var(--accent-color));
+}
+
+
+.actions-list .action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actions-list .tooltip {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Chillax', sans-serif;
+}
+
+
+.actions-list .action:hover .button {
+    background-color: rgba(var(--accent-color), 0.4);
+}
+
+.actions-list .action[sm='facebook'] i {
+    color: rgb(59, 89, 152);
+}
+
+.actions-list .action[sm='facebook'].button {
+    background-color: rgba(59, 89, 152, 0.1);
+}
+
+
+.actions-list .action:hover[sm='facebook'] .button {
+    background-color: rgba(59, 89, 152, 0.4);
+}
+
+.actions-list .action[sm='twitter'] i {
+    color: rgb(29, 161, 242);
+}
+
+.actions-list .action[sm='twitter'] .button {
+    background-color: rgba(29, 161, 242, 0.1);
+}
+
+
+.actions-list .action:hover[sm='twitter'] .button {
+    background-color: rgba(29, 161, 242, 0.4);
+}
+
+.actions-list .action[sm='instagram'] i {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@property --opacity {
+    syntax: '<percentage>';
+    initial-value: 10%;
+    inherits: false;
+}
+
+.actions-list .action[sm='instagram'] .button {
+
+    background: radial-gradient(circle at 30% 107%, rgba(253, 244, 150, var(--opacity)) 0%, rgba(253, 244, 151, var(--opacity)) 5%, rgba(253, 89, 73, var(--opacity)) 45%, rgba(214, 36, 159, var(--opacity)) 60%, rgb(40, 90, 235, var(--opacity)) 90%);
+    transition: --opacity .5s ease;
+}
+
+
+.actions-list .action:hover[sm='instagram'] .button {
+    --opacity: 40%
+}
+
+.actions-list .action[sm='tiktok'] i {
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(1px 1px 0px #FD3E3E) drop-shadow(-1px -1px 0px #4DE8F4);
+}
+
+.actions-list .action[sm='tiktok'] .button {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.actions-list .action:hover[sm='tiktok'] .button {
+    background-color: rgba(0, 0, 0, 0.4);
+}

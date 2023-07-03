@@ -19,9 +19,6 @@ function sortable(section, onUpdate) {
         } else {
           var targetPos = target.getBoundingClientRect();
           var next = (e.clientY - targetPos.top) / (targetPos.bottom - targetPos.top) > 0.7 || (e.clientX - targetPos.left) / (targetPos.right - targetPos.left) > 0.7;
-          console.log(
-            (e.clientX - targetPos.left)
-          )
           section.insertBefore(dragEl, next && target.nextSibling || target);
         }
       }
