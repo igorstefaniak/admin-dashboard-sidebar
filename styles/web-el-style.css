@@ -20,8 +20,11 @@
   .chart {
     height: 200px;
 }
-
+.grid-item {
+  width: 100%;
 }
+}
+
 
 @media only screen and (max-width:575px) and (min-width:360px) {
   #list {
@@ -31,30 +34,35 @@
   .chart {
     height: 200px;
 }
+
+.grid-item {
+  width: 100%;
+}
 }
 
 @media only screen and (max-width:899px) and (min-width:576px) {
 
-  #list {
-    grid-template-columns: repeat(2, 1fr);
+  .grid-item {
+    width: 100%;
   }
 
 }
 
 @media only screen and (max-width:1249px) and (min-width:900px) {
 
-  #list {
-    grid-template-rows: repeat(5, 240px);
-    grid-template-columns: repeat(3, 1fr);
+  .grid-item {
+    width: calc( (100% - 20px * 2) / 2 + 10px);
   }
+
+  .grid-item--width2 { width: calc( ((100% - 20px * 2) / 2) * 2 + 40px ); }
+
 }
 
 @media only screen and (max-width:1649px) and (min-width:1250px) {
-
-  #list {
-    grid-template-rows: repeat(5, 240px);
-    grid-template-columns: repeat(4, 1fr);
+  .grid-item {
+    width: calc( (100% - 20px * 2) / 3 + 0px);
   }
+  .grid-item--width2 { width: calc( ((100% - 20px * 2) / 3) * 2 + 20px ); }
 
 }
 

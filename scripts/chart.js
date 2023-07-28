@@ -83,6 +83,23 @@ maintainAspectRatio: false,
 
 var accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color');
 
+function rgbToHex(color) {
+
+  let rgb = color.split(",");
+
+  return('#'+valueToHex(((Number(rgb[0]))) + valueToHex(Number(rgb[1])) + valueToHex(Number(rgb[2]))));
+}
+
+function valueToHex(c) {
+
+  var hex = c.toString(16);
+
+  return hex
+
+}
+
+console.log(rgbToHex(accentColor))
+
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
@@ -93,7 +110,7 @@ new Chart(ctx, {
       label: '',
       data: [12, 19, 3, 5, 2, 3],
       borderWidth: 1,
-      borderColor: accentColor,
+      borderColor: rgbToHex(accentColor),
       backgroundColor: "#214c62",
       borderWidth: 4,
       borderRadius: 8

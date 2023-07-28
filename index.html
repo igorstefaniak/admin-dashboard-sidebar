@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="./styles/main-style.css">
   <link rel="stylesheet" href="./styles/widget.css">
   <link rel="stylesheet" href="./styles/web-el-style.css">
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
 
 <body>
@@ -131,79 +131,118 @@
   </nav>
 
   <section class="data-section">
-    <section id="list">
-            <div id='div1' class='widget2x2 widget'>
-              <div class="title"><i class="bx bx-calendar"></i>
-                <div tabindex="0" id='data'>Liczba klientów</div>
-              </div>
-              <div class="chart"><canvas id="myChart"></canvas></div>
-            </div>
-             <div id="div2" class="widget1x1 widget" draggable="true">
-        <div class="title"><i class="bx bx-cart"></i>
-          <div tabindex="0" id="data">Liczba zamówień (dzisiaj)</div>
-        </div>
-        <div class="counter">
-          <div class="text" >223<span class="small"> tys.</span></div>
-        </div>
-      </div>
-      <div id="div3" class="widget1x1 widget" draggable="true">
-        <div class="title"><i class="bx bx-hdd"></i>
-          <div tabindex="0" id="data">Dysk zewnętrzny</div>
-        </div>
-        <div class="circle-big">
-          <div class="text">
-            50/100<div class="small">GB</div>
+    <div style="    margin: 18px; font-size: 22px; font-weight: 500; font-family: 'Chillax-Regular';"><span
+        id="hello-text"></span><span id="user-text"></span></div>
+
+    <div class="grid" id="list">
+      <div class="grid">
+        <div class="grid-item">
+          <div class="title"><i class="bx bx-hdd"></i>
+            <div tabindex="0" id="data">Dysk</div>
           </div>
-          <svg>
-            <circle class="bg" cx="57" cy="57" r="52"></circle>
-            <circle class="progress" cx="57" cy="57" r="52" style="--percent:50"></circle>
-          </svg>
-        </div>
-      </div>
-
-      <div id="div4" class="widget1x2 widget" draggable="true">
-        <div class="title"><i class="bx bx-comment-detail"></i>
-          <div tabindex="0">Social Media</div>
-        </div>
-        <div class="content">
-          <div class="actions-list">
-            <div class="action" sm="facebook">
-              <div class="button">
-                <i class="bx bxl-facebook-circle"></i>
+          <div class="content">
+            <div class="circle-big">
+              <div class="text">
+                50/100<div class="small">GB</div>
               </div>
-              <div class="tooltip">Facebook</div>
+              <svg>
+                <circle class="bg" cx="57" cy="57" r="52"></circle>
+                <circle class="progress" cx="57" cy="57" r="52" style="--percent:50"></circle>
+              </svg>
             </div>
-            <div class="action" sm="instagram">
-              <div class="button">
-                <i class="bx bxl-instagram"></i>
-              </div>
-              <div class="tooltip">Instagram</div>
-            </div>
-            <div class="action" sm="twitter">
-              <div class="button">
-                <i class="bx bxl-twitter"></i>
-              </div>
-              <div class="tooltip">Twitter</div>
-            </div>
-            <div class="action" sm="tiktok">
-              <div class="button">
-                <i class="bx bxl-tiktok"></i>
-              </div>
-              <div class="tooltip">Tiktok</div>
-            </div>
-
           </div>
         </div>
-      </div>
+        <div class="grid-item">
+          <div class="title"><i class="bx bx-cart"></i>
+            <div tabindex="0" id="data">Liczba zamówień (dzisiaj)</div>
+          </div>
+          <div class="content">
+            <div class="counter">
+              <div class="text">223<span class="small"> tys.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item grid-item--width2 grid-item--height2">
+          <div class="title"><i class="bx bx-calendar"></i>
+            <div tabindex="0" id='data'>Liczba klientów</div>
+          </div>
+          <div class="chart"><canvas id="myChart"></canvas></div>
+        </div>
+        <div class="grid-item grid-item--width2">
+          <div class="title"><i class="bx bx-comment-detail"></i>
+            <div tabindex="0">Social Media</div>
+          </div>
+          <div class="content">
+            <div class="actions-list">
+              <div class="action" sm="facebook">
+                <a class="button">
+                  <i class="bx bxl-facebook-circle"></i>
+                </a>
+                <div class="tooltip">Facebook</div>
+              </div>
+              <div class="action" sm="instagram">
+                <a class="button">
+                  <i class="bx bxl-instagram"></i>
+                </a>
+                <div class="tooltip">Instagram</div>
+              </div>
+              <div class="action" sm="twitter">
+                <a class="button">
+                  <i class="bx bxl-twitter"></i>
+                </a>
+                <div class="tooltip">Twitter</div>
+              </div>
+              <div class="action" sm="tiktok">
+                <a class="button" href="#">
+                  <i class="bx bxl-tiktok"></i>
+                </a>
+                <div class="tooltip">Tiktok</div>
+              </div>
 
-    </section>
+            </div>
+          </div>
+        </div>
+        <!--         <div class="grid-item grid-item--width2"></div>
+        <div class="grid-item grid-item--width2"></div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--width2"></div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--width2 grid-item--height2"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--width2"></div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item"></div> -->
+      </div>
   </section>
 
   <script src="./scripts/sidebar.js"></script>
   <script src="./scripts/welcome-text.js"></script>
   <script src="./scripts/widgets.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/draggabilly@3/dist/draggabilly.pkgd.min.js"></script>
+  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
   <script src="./scripts/chart.js"></script>
+  <script>
+    var pckry = new Packery('.grid', {
+      itemSelector: '.grid-item',
+      gutter: 20,
+      columnWidth: '.grid-item',
+      percentPosition: !0
+    });
+  /**
+    * ! .grid-item ustala szerokość kolumny, w przypadku zmiany rozdzielczości (np. proporcji okienka, telofonu) w css (plik: web-el-style.css) zastosowałem media queries które dostosowują tą szerkość oraz dostosowują szerokość elementów widgetów powiększonych tzn. .grid-item--width2 by i one nie były nadpisywane przez szerokość .grid-item 
+    * todo zrobić porządek bo za miesiąc będę jak what the fuck is this piece of shit?
+    */
+
+    pckry.getItemElements().forEach(function (itemElem) {
+      var draggie = new Draggabilly(itemElem);
+      pckry.bindDraggabillyEvents(draggie);
+    });
+
+  </script>
 
 </body>
 

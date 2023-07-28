@@ -5,11 +5,6 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    display: grid;
-    grid-gap: 15px;
-    grid-template-rows: repeat(5, 240px);
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-flow: row dense;
     min-height: 100vh;
     transition: all 0.5s ease;
     margin: 15px;
@@ -22,30 +17,36 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    position: initial;
+    width: -webkit-fill-available;
 }
 
 .content{
     display: flex;
     justify-content: center;
+    margin: 70px 0 30px;
 }
 
 #list .title div {
     font-family: 'Chillax-Regular', sans-serif;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #list .title i {
     margin-right: 6px;
 }
 
-.widget {
+/* .widget {
     cursor: grab;
     font-size: 20px;
     background: var(--sidebar-color);
     border-radius: 20px;
-
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .widget1x1 {
@@ -63,13 +64,12 @@
 .widget2x2 {
     grid-area: span 2/span 2;
 }
-
+ */
 
 .circle-big {
     position: relative;
     width: 114px;
     height: 114px;
-    margin: 30px auto 25px auto;
 }
 
 .circle-big svg {
@@ -106,21 +106,14 @@
     line-height: 22px;
 }
 
-.widget .circle-big {
-    position: relative;
-    margin: 30px auto 25px auto;
-    width: 114px;
-    height: 114px;
-}
-
-.widget svg {
+.grid-item svg {
     position: relative;
     width: 114px;
     height: 114px;
     transform: rotate(-90deg);
 }
 
-.widget svg circle {
+.grid-item svg circle {
     width: 100%;
     height: 100%;
     fill: none;
@@ -130,7 +123,7 @@
     stroke-linecap: round;
 }
 
-.widget svg circle:last-of-type {
+.grid-item svg circle:last-of-type {
     stroke-dasharray: 327px;
     stroke-dashoffset: calc(327px - (327px * var(--percent)) / 100);
     animation: big 1.5s ease-in-out;
@@ -156,10 +149,24 @@
     }
 }
 
+@keyframes animateBorder {
+    to {
+      outline-color: var(--highlight-color);
+      box-shadow: 0 0 0 6px transparent;
+    }
+}
+
 .ghost {
     box-sizing: border-box;
     outline: 4px dashed var(--highlight-color);
+    box-shadow: 0 0 0 6px transparent;
     background-color: transparent;
+}
+
+
+
+.ghost::before{
+    
 }
 
 .hidden-grab-ghost {
@@ -175,7 +182,6 @@
     position: relative;
     width: 150px;
     height: 114px;
-    margin: 30px auto 25px auto;
     z-index: 10;
 }
 
@@ -217,7 +223,7 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 
