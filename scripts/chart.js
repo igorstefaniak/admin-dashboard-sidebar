@@ -479,3 +479,11 @@ new Chart(chartZloty, {
 
 
 $('#procent').text(((datasetsZloty[8] - datasetsZloty[0]) / datasetsZloty[0]  * 100).toFixed(2));
+/* $('#procent-symbol') */
+
+
+switch(Math.sign(((datasetsZloty[8] - datasetsZloty[0]) / datasetsZloty[0]  * 100).toFixed(2))){
+  case (1):
+  $('#procent-symbol').removeClass('bx-down-arrow-alt').addClass('bx-up-arrow-alt');
+  break;
+}
