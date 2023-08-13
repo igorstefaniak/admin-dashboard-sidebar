@@ -423,7 +423,7 @@ const datasetsZloty = [
 let prev = 10000;
 
 for (var i=0;i<9;i++) {
-  prev += 500 - Math.random()*1000;
+  prev += 600 - Math.random()*1000;
   datasetsZloty.push(prev);
 }
 

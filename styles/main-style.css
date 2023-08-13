@@ -530,7 +530,12 @@ canvas {
   
 .grid-item:hover {
     cursor: move;
+    
 }
+.grid-item.is-dragging {
+    z-index: 100;
+}
+
 /* .grid-item.is-dragging,
 .grid-item.is-positioning-post-drag {
     z-index: 2;
