@@ -212,7 +212,8 @@
 }
 
 .chart {
-    height: calc(100% - 69px);
+    height: 100%;
+    overflow: hidden;
 }
 
 

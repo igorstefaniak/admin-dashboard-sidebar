@@ -162,11 +162,31 @@
             </div>
           </div>
         </div>
-        <div class="grid-item grid-item--width2 grid-item--height2">
-          <div class="title"><i class="bx bx-calendar"></i>
+        <div class="grid-item grid-item--width2">
+<!--           <div class="title"><i class="bx bx-calendar"></i>
             <div tabindex="0" id='data'>Liczba klientów</div>
+          </div> -->
+          <div class="chart">
+            <div class="card-header">
+              <div class="col col-left">
+                <div class="icon-container">
+                  <i class="bx bx-bitcoin"></i>
+                </div>
+                <div class="description">
+                  <h2>Bitcoin</h2>
+                  <h4>BTC</h4>
+                </div>
+              </div>
+              <div class="col col-right">
+                <h2>119 001,28 PLN</h2>
+                <div class="percent">
+                  <i class="bx bx-down-arrow-alt"></i>
+                  <span class="text" id="procent">4.92%</span>
+                </div>
+              </div>
+            </div>
+            <canvas id="chart-zloty"></canvas>
           </div>
-          <div class="chart"><canvas id="myChart"></canvas></div>
         </div>
         <div class="grid-item grid-item--width2">
           <div class="title"><i class="bx bx-comment-detail"></i>
@@ -232,10 +252,10 @@
       columnWidth: '.grid-item',
       percentPosition: !0
     });
-  /**
-    * ! .grid-item ustala szerokość kolumny, w przypadku zmiany rozdzielczości (np. proporcji okienka, telofonu) w css (plik: web-el-style.css) zastosowałem media queries które dostosowują tą szerkość oraz dostosowują szerokość elementów widgetów powiększonych tzn. .grid-item--width2 by i one nie były nadpisywane przez szerokość .grid-item 
-    * todo zrobić porządek bo za miesiąc będę jak what the fuck is this piece of shit?
-    */
+    /**
+      * ! .grid-item ustala szerokość kolumny, w przypadku zmiany rozdzielczości (np. proporcji okienka, telofonu) w css (plik: web-el-style.css) zastosowałem media queries które dostosowują tą szerkość oraz dostosowują szerokość elementów widgetów powiększonych tzn. .grid-item--width2 by i one nie były nadpisywane przez szerokość .grid-item 
+      * todo zrobić porządek bo za miesiąc będę jak what the fuck is this piece of shit?
+      */
 
     pckry.getItemElements().forEach(function (itemElem) {
       var draggie = new Draggabilly(itemElem);
